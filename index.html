@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>D&D Monster Guessing Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type= "text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+
+    <div class = "jumbotron">
+        <h1 class="display-4">Dungeons and Dragons Monster Guessing Game</h1>
+        <hr class = "my-4">
+        <p class="instructions">Just type letters to make guesses. When you make 3 incorrect guesses, the game is over.</p>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <!--where a word will show up as "_ _ _ _ _ _ _ _ _ _"-->
+            <div class="col-md-8 wordBlank"></div>
+        </div>
+
+        <div class="row">
+            <!--where letters that have been guessed are tracked-->
+            <div class="col-md-8 lettertrack">
+                <p class="letterguess">Wrong Letters:<span id="badGuesses"></span></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Where the number of remaining attempts will be displayed-->
+            <div class = "col-md-8 lifetrack">
+                <p class="lives">Remaining Guesses: <span id="lives"></span></p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>

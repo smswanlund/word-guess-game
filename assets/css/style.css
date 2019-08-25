@@ -1,3 +1,22 @@
 body {
-    background-image: url("")
+    background-image: url("../images/dndback.jpg");
+    font-family: "Cinzel Decorative", cursive;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #77d3f8;
+    border: 2px solid lightslategray;
+}
+
+.container {
+    height: 400px;
+    width: 70%;
+    background-color: #77d3f8;
+    border: 2px solid lightslategray;
+}
+
+#wordBlank {
+    font-size: 30px;
+    letter-spacing: 5px;
 }

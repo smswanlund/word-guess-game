@@ -40,11 +40,11 @@ function Game() {
 
     // generating "_" for each letter in "blanks"
     for(var i = 0; i< blanks; i++) {
-        correctBlanks.push("_")
+        correctBlanks+="_";
     }
 
     //show the blanks in the html
-    document.getElementById("wordBlank").innerHTML = " " + correctBlanks.join("");
+    document.getElementById("wordBlank").innerHTML = " " + correctBlanks;
 
     //console.logs for initialization
     console.log(monster);
@@ -69,16 +69,21 @@ function letterCheck(letter) {
     //if monster has the guessed letter, letterInWord is true
     for(var i = 0; i < blanks; i++) {
 
-        if (monster[i] == letter) {
+        if (monster[i] === letter) {
             letterInWord = true;
         }
     }
 
-    //if letterInWord is false check to see if each letter matches the word
+    //if letterInWord is true, update correctBlanks to display new letters
     if (letterInWord) {
         for(var i = 0; i < blanks; i++) {
-            if (monster[i] == letter) {
+            
+            if (monster[i] === letter) {
+                
                 correctBlanks[i] = letter;
+                console.log(correctBlanks[i])
+
+                
             }
         }
     }
@@ -89,6 +94,7 @@ function letterCheck(letter) {
         guessesRemaining--;
     }
     console.log(correctBlanks)
+    
 }
 
 // function for completion (checking if player won/lost)

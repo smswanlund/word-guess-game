@@ -5,7 +5,8 @@
     <title>D&D Monster Guessing Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type= "text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -20,7 +21,9 @@
 
         <div class="row">
             <!--where a word will show up as "_ _ _ _ _ _ _ _ _ _"-->
-            <div class="col-md-8 wordBlank"></div>
+            <div class="col-md-8 word">
+                <p id="wordBlank"></p>
+            </div>
         </div>
 
         <div class="row">
@@ -33,13 +36,13 @@
         <div class="row">
             <!--Where the number of remaining attempts will be displayed-->
             <div class = "col-md-8 lifetrack">
-                <p class="lives">Remaining Guesses: <span id="lives"></span></p>
+                <p class="lives">Remaining Guesses: <span id="lives">3</span></p>
             </div>
         </div>
 
     </div>
 
-
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 

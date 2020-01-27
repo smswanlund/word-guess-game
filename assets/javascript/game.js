@@ -40,7 +40,7 @@ function Game() {
 
     // generating "_" for each letter in "blanks"
     for(var i = 0; i< blanks; i++) {
-        correctBlanks+="_";
+        correctBlanks[i] ="_";
     }
 
     //show the blanks in the html
@@ -69,19 +69,22 @@ function letterCheck(letter) {
     //if monster has the guessed letter, letterInWord is true
     for(var i = 0; i < blanks; i++) {
 
-        if (monster[i] === letter) {
+        if (monsterLetters[i] === letter) {
             letterInWord = true;
         }
+        console.log(letterInWord)
     }
 
     //if letterInWord is true, update correctBlanks to display new letters
     if (letterInWord) {
         for(var i = 0; i < blanks; i++) {
             
-            if (monster[i] === letter) {
+            if (letter === monsterLetters[i]) {
                 
-                correctBlanks[i] = letter;
-                console.log(correctBlanks[i])
+                correctBlanks[i]=letter;
+                console.log(correctBlanks[i]);
+
+                document.getElementById("wordBlank").innerHTML = " " + correctBlanks;
 
                 
             }
@@ -93,6 +96,8 @@ function letterCheck(letter) {
         wrongGuess.push(letter);
         guessesRemaining--;
     }
+    document.getElementById("wordBlank").innerHTML = " " + correctBlanks;
+
     console.log(correctBlanks)
     
 }
